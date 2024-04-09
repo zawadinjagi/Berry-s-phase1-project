@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
 
 :root{
-    --yellow:#F7CA3E;
+    --yellow:#183900;
     --white:#fff;
-    --black:#333;
-    --light-black:#777;
+    --black:#372c2c;
+    --light-black:#adabab;
     --light-bg:#f5f5f5;
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
 }
@@ -538,4 +538,107 @@ section{
 }
 
 
+/* media queries  */
 
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home::before,
+    .home::after{
+        display: none;
+    }
+
+}
+
+@media (max-width:768px){
+
+
+    #menu-bar{
+        transition: .2s linear;
+        display: inline-block;
+    }
+
+    .header .flex{
+        position: relative;
+    }
+
+    .header .flex .navbar{
+        position: absolute;
+        top:99%; left:0; right: 0;
+        background:var(--yellow);
+        border-top: .2rem solid rgba(0,0,0,.1);
+        transform:scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+        transition: .2s linear;
+    }
+
+    .header .flex .navbar ul{
+        flex-flow: column;
+        padding:2rem;
+    }
+
+    .header .flex .navbar ul li{
+        margin:1.5rem;
+        width: 100%;
+    }
+
+    .header .flex .navbar ul li a{
+        display: block;
+        color:var(--white);
+        padding-left: 2rem;
+        border-left: .2rem solid var(--white);
+        font-size: 2rem;
+    }
+
+    .header .flex .navbar ul li a:hover,
+    .header .flex .navbar ul li a.active{
+        color:var(--black);
+        border-color: var(--black);
+    }
+
+    #menu-bar.fa-times{
+        transform:rotate(180deg);
+    }
+
+    .header .flex .navbar.nav-toggle{
+        transform:scaleY(1);
+        opacity: 1;
+    }
+
+    .home .content{
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+
+    .order-container .order .row .image{
+        display: none;
+    }
+
+    .order-container .order .row{
+        border-radius: .5rem;
+    }
+
+    .order-container .order .row form{
+        text-align: center;
+    }
+
+}
+
+@media (max-width:500px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .footer .box-container{
+        justify-content: flex-start;
+    }
+
+}

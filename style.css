@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
 
 :root{
-    --yellow:#005092;
-    --white:#0052a9fa;
-    --black:#ffe2ba;
-    --light-black:#ffe2a3;
-    --light-bg:#ffe2b3;
+    --yellow:#F7CA3E;
+    --white:#fff;
+    --black:#333;
+    --light-black:#777;
+    --light-bg:#f5f5f5;
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
 }
 
@@ -536,7 +536,6 @@ section{
 .footer .credit span{
     color:var(--yellow);
 }
-
 
 /* media queries  */
 

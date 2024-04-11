@@ -537,6 +537,9 @@ section{
     color:var(--yellow);
 }
 
+#food-container {
+    display: flex;
+  }
 /* media queries  */
 
 @media (max-width:991px){
@@ -642,3 +645,20 @@ section{
 
 }
 
+.menu-item:not(.thead) .c1 span {
+    color: var(--darkreader-text--body-font-color-dark);
+}
+.menu-item:not(.thead) .c1 span {
+    display: block;
+    font-size: 14px;
+    color: var(--body-font-color-dark);
+    font-weight: 400;
+    font-style: italic;
+}
+.menu-item {
+    display: block;
+    unicode-bidi: isolate;
+}
+.menu-wrap {
+    overflow-x: hidden;
+}

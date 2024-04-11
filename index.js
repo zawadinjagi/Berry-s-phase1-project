@@ -33,3 +33,36 @@ $(document).ready(function(){
     });
 
 });
+
+async function search() {
+    const searchInput = document.getElementById('searchInput').value;
+    const apiUrl = `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${searchInput}&json=1`;
+
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      
+      displayResults(data.products);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+
+  function displayResults(products) {
+    const resultsContainer = document.getElementById('results');
+    resultsContainer.innerHTML = '';
+
+    if (products.length === 0) {
+      resultsContainer.innerHTML = 'No results found.';
+      return;
+    }
+
+    const ul = document.createElement('ul');
+    products.forEach(product => {
+      const li = document.createElement('li');
+      li.textContent = product.product_name || 'Unnamed product';
+      ul.appendChild(li);
+    });
+
+    resultsContainer.appendChild(ul);
+  }
